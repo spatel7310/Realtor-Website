@@ -15,28 +15,28 @@ export default function Contact() {
       strength={150}
       >
       <Wrapper id="contact">
-        <div className="container whiteColor" style={{ backgroundColor: '#70707099'}}>
+        <div className="container whiteColor" style={{ backgroundColor: '#70707099', borderRadius: '25px'}}>
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              If you're looking for a reliable and experienced real estate professional to guide you through the buying, selling, or renting process, please do not hesitate to contact me. 
+              <br/>
+              I am dedicated to providing my clients with exceptional service and expert advice. 
             </p>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <Form>
                 <label className="font13">First name:</label>
-                <input type="text" id="fname" name="fname" className="font20 extraBold whiteBg" />
+                <input type="text" id="fname" name="fname" className="font20 extraBold whiteBg whiteColor"/>
                 <label className="font13">Email:</label>
-                <input type="text" id="email" name="email" className="font20 extraBold" />
+                <input type="text" id="email" name="email" className="font20 extraBold whiteColor"/>
                 <label className="font13">Subject:</label>
-                <input type="text" id="subject" name="subject" className="font20 extraBold" />
-                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                <input type="text" id="subject" name="subject" className="font20 extraBold whiteColor"/>
+                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold whiteColor" />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8 whiteBg" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
@@ -62,9 +62,6 @@ export default function Contact() {
 }
 
 const Wrapper = styled.section`
-  width: 100%;
-`;
-const GreyBox = styled.div`
   width: 100%;
 `;
 const HeaderInfo = styled.div`
