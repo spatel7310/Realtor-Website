@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // Assets
-import RealtorLogo from "../../assets/img/clients/realtor_logo.png"
 import ClientLogo02 from "../../assets/img/clients/logo02.svg";
 import ClientLogo03 from "../../assets/img/clients/logo03.svg";
 import ClientLogo04 from "../../assets/img/clients/logo04.svg";
@@ -44,9 +43,6 @@ export default function ClientSlider() {
     <div>
       <Slider {...settings}>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={RealtorLogo} alt="realtor logo" />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo02} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
@@ -68,7 +64,7 @@ export default function ClientSlider() {
           <ImgStyle src={ClientLogo04} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={RealtorLogo} alt="client logo" />
+          <ImgStyle src={ClientLogo06} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo02} alt="client logo" />

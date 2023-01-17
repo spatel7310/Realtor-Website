@@ -3,10 +3,10 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import RollerIcon from "../../assets/svg/Services/RollerIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
-import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
+import InstagramIcon from "../../assets/svg/Services/InstagramIcon";
+import MonitorIcon from "../../assets/svg/Services/ZillowIcon";
+import BrowserIcon from "../../assets/svg/Services/YoutubeIcon";
+import PrinterIcon from "../../assets/svg/Services/KwIcon";
 import CheckMark from "../../assets/svg/Checkmark";
 
 export default function PricingTable({ icon, price, title, text,  offers, action }) {
@@ -14,7 +14,7 @@ export default function PricingTable({ icon, price, title, text,  offers, action
 
   switch (icon) {
     case "roller":
-      getIcon = <RollerIcon />;
+      getIcon = <InstagramIcon />;
       break;
     case "monitor":
       getIcon = <MonitorIcon />;
@@ -26,7 +26,7 @@ export default function PricingTable({ icon, price, title, text,  offers, action
       getIcon = <PrinterIcon />;
       break;
     default:
-      getIcon = <RollerIcon />;
+      getIcon = <InstagramIcon />;
       break;
   }
 

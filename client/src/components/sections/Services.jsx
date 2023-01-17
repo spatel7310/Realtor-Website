@@ -21,37 +21,35 @@ export default function Services() {
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            <h1 className="font40 extraBold">Links and Resources</h1>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                icon="zillow"
+                title="Zillow"
+                subtitle="Zillow is a real estate and rental marketplace website that allows users to search for homes, apartments, and other properties for sale or rent. Check out my link!"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                icon="kw"
+                title="Keller Williams"
+                subtitle="Keller Williams Realty is an American technology and international real estate franchise. Visit my real estate franchise directly."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                icon="instagram"
+                title="Instagram"
+                subtitle="Stay up to date with my latest news. Check out my instagram. "
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox 
+                icon="youtube" 
+                title="Youtube" 
+                subtitle="Subsribe to my youtube channel to get the latest and greatest real estate content." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -114,6 +112,7 @@ const ServiceBoxWrapper = styled.div`
   width: 20%;
   margin-right: 5%;
   padding: 80px 0;
+  text-align: center;
   @media (max-width: 860px) {
     width: 100%;
     text-align: center;

@@ -1,29 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+// Components
+import FullButton from "../Buttons/FullButton";
 // Assets
-import RollerIcon from "../../assets/svg/Services/RollerIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
-import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
+import InstagramIcon from "../../assets/svg/Services/InstagramIcon";
+import ZillowIcon from "../../assets/svg/Services/ZillowIcon";
+import YoutubeIcon from "../../assets/svg/Services/YoutubeIcon";
+import KwIcon from "../../assets/svg/Services/KwIcon";
 
 export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
 
   switch (icon) {
-    case "roller":
-      getIcon = <RollerIcon />;
+    case "zillow":
+      getIcon = <ZillowIcon/>;
       break;
-    case "monitor":
-      getIcon = <MonitorIcon />;
+    case "kw":
+      getIcon = <KwIcon />;
       break;
-    case "browser":
-      getIcon = <BrowserIcon />;
+    case "instagram":
+      getIcon = <InstagramIcon />;
       break;
-    case "printer":
-      getIcon = <PrinterIcon />;
+    case "youtube":
+      getIcon = <YoutubeIcon />;
       break;
     default:
-      getIcon = <RollerIcon />;
+      getIcon = <InstagramIcon />;
       break;
   }
 
@@ -31,7 +33,9 @@ export default function ServiceBox({icon, title, subtitle}) {
   return (
     <Wrapper className="flex flexColumn">
       <IconStyle>{getIcon}</IconStyle>
-      <TitleStyle className="font20 extraBold">{title}</TitleStyle>
+      <BtnWrapper >
+        <FullButton title={title} action={() => alert("clicked")} border />
+      </BtnWrapper>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
     </Wrapper>
   );
@@ -45,13 +49,12 @@ const IconStyle = styled.div`
     margin: 0 auto;
   }
 `;
-const TitleStyle = styled.h2`
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 40px 0;
-  @media (max-width: 860px) {
-    padding: 20px 0;
+const BtnWrapper = styled.div`
+  align-self: center;
+  width: 180px;
+  margin: 25px 0;
+  @media (max-width: 960px) {
+    margin: 0 auto;
   }
 `;
 const SubtitleStyle = styled.p`
