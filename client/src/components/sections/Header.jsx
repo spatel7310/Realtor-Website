@@ -4,24 +4,24 @@ import { Parallax } from "react-parallax";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 import BackgroundImage from "../../assets/img/house_background.jpeg";
+import Headshot from "../../assets/img/headshot.jpg"
 
 export default function Header() {
   return (
     <Parallax
       bgImage={BackgroundImage}
       blur={5}
-      >
+    >
       <Wrapper id="home" className="container flexSpaceCenter whiteColor">
         <LeftSide className="flexCenter">
           <div>
             <h1 className="extraBold font60">Sulay Krushikar</h1>
             <HeaderP className="font13 semiBold">
-              Welcome to my personal real estate website. I am an experienced agent ready to help you find your dream home or sell your property. 
-              With my local market knowledge and commitment to excellent service, 
+              Welcome to my personal real estate website. I am an experienced agent ready to help you find your dream home or sell your property.
+              With my local market knowledge and commitment to excellent service,
               I will ensure your real estate experience is a success. Contact me to schedule a viewing.
             </HeaderP>
             <BtnWrapper>
@@ -31,7 +31,7 @@ export default function Header() {
         </LeftSide>
         <RightSide>
           <ImageWrapper>
-            <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+            <Img className="radius8" src={Headshot} alt="office" style={{ zIndex: 9, width: 410 }} />
             <QuoteWrapper className="flexCenter darkBg radius8">
               <QuotesWrapper>
                 <QuotesIcon />
@@ -40,7 +40,7 @@ export default function Header() {
                 <p className="font15 whiteColor">
                   <em>"I had the pleasure of working with Sulay Krushikar during the purchase of my first home and couldn't be happier! Sulay was patient, knowledgeable, and truly went above and beyond to make the process as smooth and stress-free as possible."</em>
                 </p>
-                <p className="font13 sandColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+                <p className="font13 sandColor textRight" style={{ marginTop: '10px' }}>- Happy Customer</p>
               </div>
             </QuoteWrapper>
             <DotsWrapper>

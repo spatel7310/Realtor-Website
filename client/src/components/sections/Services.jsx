@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 // Components
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import Video from "../../assets/img/posts/video1.mp4"
+import Thumbnail from "../../assets/img/posts/living_room.jpg"
 
 export default function Services() {
+  const myRef = useRef();
+  const [playVideo, setPlayVideo] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((param) => {
+      const par = param[0]
+      setPlayVideo(par.isIntersecting)
+    })
+    observer.observe(myRef.current);
+  }, [])
+
   return (
     <Wrapper id="services">
       <div className="lightBg" style={{ padding: "50px 0" }}>
@@ -46,9 +56,9 @@ export default function Services() {
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox 
-                icon="youtube" 
-                title="Youtube" 
+              <ServiceBox
+                icon="youtube"
+                title="Youtube"
                 subtitle="Subsribe to my youtube channel to get the latest and greatest real estate content." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
@@ -63,7 +73,7 @@ export default function Services() {
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
                   diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>
                     <FullButton title="Get Started" action={() => alert("clicked")} />
                   </div>
@@ -74,21 +84,14 @@ export default function Services() {
               </AddLeft>
               <AddRight>
                 <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
+                  <div>
+                    <MediaContainer ref={myRef}>
+                      {playVideo ?
+                        <ReactPlayer url={Video} playing={true} controls={true} loop={true} muted={false} playsinline={true} />
+                        :
+                        <img src={Thumbnail} alt="thumbnail" />
+                      }
+                    </MediaContainer>
                   </div>
                 </AddRightInner>
               </AddRight>
@@ -163,7 +166,6 @@ const AddLeft = styled.div`
 const AddRight = styled.div`
   width: 50%;
   position: absolute;
-  top: -70px;
   right: 0;
   @media (max-width: 860px) {
     width: 80%;
@@ -175,21 +177,35 @@ const AddRight = styled.div`
 const AddRightInner = styled.div`
   width: 100%;
 `;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
+const MediaContainer = styled.div`
   margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  div {
+    height: auto !important;
+    transition: opacity 400ms ease 0ms;
+    video {
+      height: auto !important;
+      border-radius: 1rem;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 2s;
+      
+      @keyframes fadeInOpacity {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
-`;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
   img {
     width: 100%;
     height: auto;
@@ -197,29 +213,18 @@ const AddImgWrapp2 = styled.div`
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+  
+    @keyframes fadeInOpacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 `;

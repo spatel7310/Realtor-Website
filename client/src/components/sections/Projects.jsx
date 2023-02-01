@@ -4,12 +4,13 @@ import styled from "styled-components";
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import ProjectImg1 from "../../assets/img/projects/1.png";
-import ProjectImg2 from "../../assets/img/projects/2.png";
-import ProjectImg3 from "../../assets/img/projects/3.png";
-import ProjectImg4 from "../../assets/img/projects/4.png";
-import ProjectImg5 from "../../assets/img/projects/5.png";
-import ProjectImg6 from "../../assets/img/projects/6.png";
+import FirstPost1 from "../../assets/img/posts/front_view.jpg";
+import FirstPost2 from "../../assets/img/posts/indoor_pool.jpg";
+import FirstPost3 from "../../assets/img/posts/kitchen.jpg";
+import FirstPost4 from "../../assets/img/posts/living_room.jpg";
+import FirstPost5 from "../../assets/img/posts/main_entrance.jpg";
+import Video from "../../assets/img/posts/video2.mp4"
+import Thumbnail from "../../assets/img/sk_logo.png"
 import AddImage2 from "../../assets/img/add/add2.png";
 
 export default function Projects() {
@@ -28,7 +29,7 @@ export default function Projects() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg1}
+                img={FirstPost1}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}
@@ -36,7 +37,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg2}
+                img={FirstPost2}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}
@@ -44,7 +45,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg3}
+                img={FirstPost3}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}
@@ -54,7 +55,7 @@ export default function Projects() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg4}
+                img={FirstPost4}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}
@@ -62,15 +63,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <ProjectBox
-                img={ProjectImg6}
+                img={FirstPost5}
                 title="Awesome Project"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 action={() => alert("clicked")}

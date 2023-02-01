@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function ProjectBox({ img, title, text, action}) {
+export default function ProjectBox({ img, title, text, action }) {
   return (
     <Wrapper>
       <ImgBtn className="aniamte pointer" onClick={action ? () => action() : null}>

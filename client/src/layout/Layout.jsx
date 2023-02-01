@@ -5,7 +5,6 @@ import Header from "../components/sections/Header";
 import Services from "../components/sections/Services";
 import Projects from "../components/sections/Projects";
 import Blog from "../components/sections/Blog";
-import Pricing from "../components/sections/Pricing";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/sections/Footer"
 
