@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
@@ -9,11 +10,21 @@ import FirstPost2 from "../../assets/img/posts/indoor_pool.jpg";
 import FirstPost3 from "../../assets/img/posts/kitchen.jpg";
 import FirstPost4 from "../../assets/img/posts/living_room.jpg";
 import FirstPost5 from "../../assets/img/posts/main_entrance.jpg";
-import Video from "../../assets/img/posts/video2.mp4"
-import Thumbnail from "../../assets/img/sk_logo.png"
-import AddImage2 from "../../assets/img/add/add2.png";
+import Video from "../../assets/img/posts/video3.mp4";
+import Thumbnail from "../../assets/img/posts/indoor_pool.jpg";
 
 export default function Projects() {
+  const myRef = useRef();
+  const [playVideo, setPlayVideo] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((param) => {
+      const par = param[0]
+      setPlayVideo(par.isIntersecting)
+    })
+    observer.observe(myRef.current);
+  }, [])
+
   return (
     <Wrapper id="projects">
       <div className="whiteBg">
@@ -82,9 +93,13 @@ export default function Projects() {
           <Advertising className="flexSpaceCenter">
             <AddLeft>
               <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
-                </ImgWrapper>
+                <MediaContainer ref={myRef}>
+                  {playVideo ?
+                    <ReactPlayer url={Video} playing={true} controls={true} loop={true} muted={false} playsinline={true} />
+                    :
+                    <img src={Thumbnail} alt="thumbnail" />
+                  }
+                </MediaContainer>
               </AddLeftInner>
             </AddLeft>
             <AddRight>
@@ -165,29 +180,72 @@ const AddRight = styled.div`
 const AddLeftInner = styled.div`
   width: 100%;
   position: absolute;
-  top: -300px;
+  top: -285px;
   left: 0;
   @media (max-width: 1190px) {
-    top: -250px;
+    top: -300px !important;
   }
   @media (max-width: 920px) {
-    top: -200px;
+    top: -240px !important;
   }
   @media (max-width: 860px) {
     order: 1;
     position: relative;
-    top: -60px;
+    top: -45px !important;
     left: 0;
   }
 `;
-const ImgWrapper = styled.div`
-  width: 100%;
-  padding: 0 15%;
+const MediaContainer = styled.div`
+  margin: 0 6% 10px 6%;
+  display: flex;
+  align-items: center;
+  div {
+    height: auto !important;
+    transition: opacity 400ms ease 0ms;
+    margin: auto;
+    width: 400px !important;
+    padding: 0 40px;
+    video {
+      height: auto !important;
+      border-radius: 1rem;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 2s;
+      
+      @keyframes fadeInOpacity {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
   img {
     width: 100%;
     height: auto;
-  }
-  @media (max-width: 400px) {
-    padding: 0;
+    border-radius: 1rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+  
+    @keyframes fadeInOpacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 `;
