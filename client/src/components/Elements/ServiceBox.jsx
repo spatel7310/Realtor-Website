@@ -8,12 +8,12 @@ import ZillowIcon from "../../assets/svg/Services/ZillowIcon";
 import YoutubeIcon from "../../assets/svg/Services/YoutubeIcon";
 import KwIcon from "../../assets/svg/Services/KwIcon";
 
-export default function ServiceBox({icon, title, subtitle}) {
+export default function ServiceBox({ icon, title, link, subtitle }) {
   let getIcon;
 
   switch (icon) {
     case "zillow":
-      getIcon = <ZillowIcon/>;
+      getIcon = <ZillowIcon />;
       break;
     case "kw":
       getIcon = <KwIcon />;
@@ -29,12 +29,13 @@ export default function ServiceBox({icon, title, subtitle}) {
       break;
   }
 
-
   return (
     <Wrapper className="flex flexColumn">
       <IconStyle>{getIcon}</IconStyle>
       <BtnWrapper >
-        <FullButton title={title} action={() => alert("clicked")} border />
+        <FullButton title={title} action={() => {
+          window.location.href = link;
+        }} border />
       </BtnWrapper>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
     </Wrapper>

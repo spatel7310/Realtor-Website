@@ -32,33 +32,31 @@ export default function Projects() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Projects</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Here you will find some of the latest homes that are on the market. Here is one that is currently on the market.
             </p>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={FirstPost1}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="6947 Kirkbridge Hill"
+                text="Located in a highly sought-after neighborhood, this home is the perfect combination of privacy and accessibility."
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={FirstPost2}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="The Hills of Chelsea Park"
+                text="This property comes with a fitted indoor pool equipped with temprature control."
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={FirstPost3}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="SouthEast Michigan"
+                text="Beautifully styled kitchen with a modern feel to it. "
                 action={() => alert("clicked")}
               />
             </div>
@@ -67,16 +65,16 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={FirstPost4}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Renovated Project"
+                text="Escape to your own private oasis in the spacious master suite."
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={FirstPost5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Open Concept"
+                text="Imagine entertaining guests in the beautiful, open-concept living and dining areas. Enjoy the convenience of a double car garage and ample storage space."
                 action={() => alert("clicked")}
               />
             </div>
@@ -103,11 +101,10 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <h4 className="font15 semiBold">Find the best deals</h4>
+              <h2 className="font40 extraBold">Let Me Work for You</h2>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                With my extensive market knowledge, expert negotiating skills and unparalleled customer service, let me guide you through the buying or selling process with ease.
               </p>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>

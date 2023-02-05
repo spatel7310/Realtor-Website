@@ -38,6 +38,7 @@ export default function Services() {
               <ServiceBox
                 icon="zillow"
                 title="Zillow"
+                link="https://www.zillow.com/profile/Sulay%20K"
                 subtitle="Zillow is a real estate and rental marketplace website that allows users to search for homes, apartments, and other properties for sale or rent. Check out my link!"
               />
             </ServiceBoxWrapper>
@@ -45,6 +46,7 @@ export default function Services() {
               <ServiceBox
                 icon="kw"
                 title="Keller Williams"
+                link="https://sulay.kw.com/"
                 subtitle="Keller Williams Realty is an American technology and international real estate franchise. Visit my real estate franchise directly."
               />
             </ServiceBoxWrapper>
@@ -52,6 +54,7 @@ export default function Services() {
               <ServiceBox
                 icon="instagram"
                 title="Instagram"
+                link="https://www.instagram.com/soldbysulay/"
                 subtitle="Stay up to date with my latest news. Check out my instagram. "
               />
             </ServiceBoxWrapper>
@@ -59,6 +62,7 @@ export default function Services() {
               <ServiceBox
                 icon="youtube"
                 title="Youtube"
+                link="https://www.youtube.com/@sulaykrushikar5959/featured"
                 subtitle="Subsribe to my youtube channel to get the latest and greatest real estate content." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
@@ -67,11 +71,10 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                <h4 className="font15 semiBold">Discover your dream home</h4>
+                <h2 className="font40 extraBold">The Best Way to Buy</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Discover your dream home with me, a seasoned real estate agent committed to finding the perfect property that fits your needs and exceeds your expectations.
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>

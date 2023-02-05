@@ -11,38 +11,36 @@ export default function Blog() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Blog Stories</h1>
+            <h1 className="font40 extraBold">Latest News and Updates</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Stay informed and ahead of the market trends with my latest real estate updates. From new listings to changes in the industry, I make it my priority to keep you informed and provide you with the most current information to make the best decision for your needs.
             </p>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
+                title="New Office"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
-                author="Luke Skywalker, 2 days ago"
+                author="Sulay Krushikar, 2 months ago"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
+                title="More Properties for Sale!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
-                author="Luke Skywalker, 2 days ago"
+                author="Sulay Krushikar, 29 days ago"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
+                title="Just Bought!"
+                text="Very happy with the recent purchase I just made. Sulay helped me out a ton!"
+                tag="client"
+                author="Luke Skywalker, 13 days ago"
                 action={() => alert("clicked")}
               />
             </div>
@@ -50,28 +48,28 @@ export default function Blog() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
+                title="Revolutionize with Rates!"
+                text="Rising mortgage rates signal a strong economy, making now a good time for financially ready buyers to invest and lock in low rates."
+                tag="news"
+                author="Ai Lee, 2 days ago"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
+                title="Home Owners Unite"
+                text="Home owners often have a strong emotional attachment to their property, they often view it as more than just an investment. "
+                tag="news"
+                author="Sophie Petersen, 12 days ago"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Investment Help"
+                text="Real estate can be a profitable investment opportunity, as property values tend to appreciate over time, creating potential for capital gains."
                 tag="company"
-                author="Luke Skywalker, 2 days ago"
+                author="Sulay Krushikar, 7 days ago"
                 action={() => alert("clicked")}
               />
             </div>
@@ -83,7 +81,7 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="lightBg" style={{padding: '50px 0'}}>
+      <div className="lightBg" style={{ padding: '50px 0' }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
