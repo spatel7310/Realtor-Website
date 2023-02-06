@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
+import { Link } from "react-scroll";
 // Components
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
@@ -78,10 +79,13 @@ export default function Services() {
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
+                    <FullButton title="Get Started" action={() => alert("clicked")}>
+                    </FullButton>
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <Link to="contact" spy={true} smooth={true} >
+                      <FullButton title="Contact Us" border />
+                    </Link>
                   </div>
                 </ButtonsRow>
               </AddLeft>

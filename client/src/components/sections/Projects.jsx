@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
+import { Link } from "react-scroll";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
@@ -81,7 +82,7 @@ export default function Projects() {
           </div>
           <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("clicked")} />
+              <FullButton title="Show More" action={() => window.location.href = 'https://www.zillow.com/profile/Sulay-K/'} />
             </div>
           </div>
         </div>
@@ -111,7 +112,9 @@ export default function Projects() {
                   <FullButton title="Get Started" action={() => alert("clicked")} />
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                  <Link to="contact" spy={true} smooth={true} >
+                    <FullButton title="Contact Us" border />
+                  </Link>
                 </div>
               </ButtonsRow>
             </AddRight>

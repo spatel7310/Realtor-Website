@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Parallax } from "react-parallax";
+import axios from 'axios';
 // Assets
 import ContactImg1 from "../../assets/img/contact-1.png";
 import ContactImg2 from "../../assets/img/contact-2.png";
@@ -8,35 +9,52 @@ import ContactImg3 from "../../assets/img/contact-3.png";
 import MapBackgroundImage from "../../assets/img/map_background.jpg";
 
 export default function Contact() {
-  
+  const [recipient_email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [name, setName] = useState('')
+
+  function sendMail() {
+    if (recipient_email && subject && message && name) {
+      axios.post("https://localhost:5000/send_email", {
+        recipient_email,
+        subject,
+        message,
+        name
+      }).then(() => alert('Message sent successfully'))
+        .catch(() => alert('Message failed to send'))
+      return;
+    }
+    return alert('Fill in all of the fields to continue')
+  }
   return (
     <Parallax
       bgImage={MapBackgroundImage}
       strength={150}
-      >
+    >
       <Wrapper id="contact">
-        <div className="container whiteColor" style={{ backgroundColor: '#70707099', borderRadius: '25px'}}>
+        <div className="container whiteColor" style={{ backgroundColor: '#70707099', borderRadius: '25px' }}>
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
             <p className="font13">
-              If you're looking for a reliable and experienced real estate professional to guide you through the buying, selling, or renting process, please do not hesitate to contact me. 
-              <br/>
-              I am dedicated to providing my clients with exceptional service and expert advice. 
+              If you're looking for a reliable and experienced real estate professional to guide you through the buying, selling, or renting process, please do not hesitate to contact me.
+              <br />
+              I am dedicated to providing my clients with exceptional service and expert advice.
             </p>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <Form>
                 <label className="font13">First name:</label>
-                <input type="text" id="fname" name="fname" className="font20 extraBold whiteBg whiteColor"/>
+                <input type="text" id="fname" name="fname" onChange={(e) => setName(e.target.value)} className="font20 extraBold whiteBg whiteColor" />
                 <label className="font13">Email:</label>
-                <input type="text" id="email" name="email" className="font20 extraBold whiteColor"/>
+                <input type="text" id="email" name="email" onChange={(e) => setEmail(e.target.value)} className="font20 extraBold whiteColor" />
                 <label className="font13">Subject:</label>
-                <input type="text" id="subject" name="subject" className="font20 extraBold whiteColor"/>
-                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold whiteColor" />
+                <input type="text" id="subject" name="subject" onChange={(e) => setSubject(e.target.value)} className="font20 extraBold whiteColor" />
+                <textarea rows="4" cols="50" type="text" id="message" name="message" onChange={(e) => setMessage(e.target.value)} className="font20 extraBold whiteColor" />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Send Message" className="pointer animate radius8 whiteBg" style={{ maxWidth: "220px" }} />
+                <ButtonInput type="submit" value="Send Message" onClick={() => sendMail()} className="pointer animate radius8 whiteBg" style={{ maxWidth: "220px" }} />
               </SumbitWrapper>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">

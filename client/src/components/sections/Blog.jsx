@@ -23,7 +23,6 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Sulay Krushikar, 2 months ago"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -32,7 +31,6 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Sulay Krushikar, 29 days ago"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -40,8 +38,7 @@ export default function Blog() {
                 title="Just Bought!"
                 text="Very happy with the recent purchase I just made. Sulay helped me out a ton!"
                 tag="client"
-                author="Luke Skywalker, 13 days ago"
-                action={() => alert("clicked")}
+                author="Ankur, 6 months ago"
               />
             </div>
           </div>
@@ -52,7 +49,6 @@ export default function Blog() {
                 text="Rising mortgage rates signal a strong economy, making now a good time for financially ready buyers to invest and lock in low rates."
                 tag="news"
                 author="Ai Lee, 2 days ago"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -61,7 +57,6 @@ export default function Blog() {
                 text="Home owners often have a strong emotional attachment to their property, they often view it as more than just an investment. "
                 tag="news"
                 author="Sophie Petersen, 12 days ago"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -70,13 +65,12 @@ export default function Blog() {
                 text="Real estate can be a profitable investment opportunity, as property values tend to appreciate over time, creating potential for capital gains."
                 tag="company"
                 author="Sulay Krushikar, 7 days ago"
-                action={() => alert("clicked")}
               />
             </div>
           </div>
           <div className="row flexCenter">
-            <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("clicked")} />
+            <div style={{ margin: "50px 0", width: 250 }}>
+              <FullButton title="Latest Market News" action={() => window.location.href = 'https://www.cnbc.com/real-estate/'} />
             </div>
           </div>
         </div>
