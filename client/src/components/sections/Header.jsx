@@ -25,7 +25,7 @@ export default function Header() {
               I will ensure your real estate experience is a success. Contact me to schedule a viewing.
             </HeaderP>
             <BtnWrapper>
-              <FullButton title="Get Started" />
+              <FullButton title="Get Started" action={() => window.location.href = 'https://www.zillow.com/profile/Sulay-K/'} />
             </BtnWrapper>
           </div>
         </LeftSide>

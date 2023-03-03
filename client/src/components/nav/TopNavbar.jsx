@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 // Components
 import Sidebar from "./Sidebar";
 import Backdrop from "../Elements/Backdrop";
+import FullButton from "../Buttons/FullButton";
 // Assets
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import Logo from "../../assets/img/sk_logo.png"
@@ -61,9 +62,9 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer flexCenter">
-              <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-                Get Started
-              </a>
+              <Link to="contact" spy={true} smooth={true} className="lightBg radius8">
+                <FullButton title="Contact Us" border />
+              </Link>
             </li>
           </UlWrapperRight>
         </NavInner>

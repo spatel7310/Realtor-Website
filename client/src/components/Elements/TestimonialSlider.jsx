@@ -33,20 +33,20 @@ export default function TestimonialSlider() {
       <Slider {...settings}>
         <LogoWrapper className="flexCenter">
           <TestimonialBox
-            text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
-            author="Ralph Waldo Emerson"
+            text="Very happy with the purchase I just made! Sulay helped me out a ton. Big thank you to him."
+            author="Ankur Krushikar"
           />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <TestimonialBox
-            text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
-            author="Ralph Waldo Emerson"
+            text="Rents are rising so i'm looking into something for myself. Working with Sulay has been so helpful."
+            author="Shawn"
           />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <TestimonialBox
-            text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
-            author="Ralph Waldo Emerson"
+            text="Sulay was able to negotiate a deal for my house that saved me thousands of dollars."
+            author="Happy Client"
           />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">

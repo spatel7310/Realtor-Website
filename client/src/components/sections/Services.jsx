@@ -79,7 +79,7 @@ export default function Services() {
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")}>
+                    <FullButton title="Get Started" action={() => window.location.href = 'https://www.zillow.com/profile/Sulay-K/'}>
                     </FullButton>
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>

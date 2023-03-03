@@ -19,24 +19,24 @@ export default function Blog() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="New Office"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Buying Oppurtunity Amidst the Storm?"
+                text="In a competitive market, there might be light at the end of the tunnel. I deal with this work day and night, let me tell you what I know."
                 tag="company"
-                author="Sulay Krushikar, 2 months ago"
+                author="Sulay Krushikar, 4 days ago"
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="More Properties for Sale!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Rental Makets Remain Tight"
+                text="Rental markets in many urban areas are still very tight, it might be time to look into stepping out of your rental."
                 tag="company"
-                author="Sulay Krushikar, 29 days ago"
+                author="Sulay Krushikar, 8 days ago"
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <BlogBox
-                title="Just Bought!"
-                text="Very happy with the recent purchase I just made. Sulay helped me out a ton!"
+                title="New Construction is on the Rise!"
+                text="Despite supply chain disruptions and rising material costs, new construction is on the rise in many areas."
                 tag="client"
                 author="Ankur, 6 months ago"
               />
@@ -80,9 +80,9 @@ export default function Blog() {
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Curious about what people have to say about my work as a real estate agent?
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Check out this section for reviews and quotes from satisfied clients and colleagues.
             </p>
           </HeaderInfo>
           <TestimonialSlider />

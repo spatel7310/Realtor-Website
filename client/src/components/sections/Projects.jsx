@@ -42,7 +42,7 @@ export default function Projects() {
                 img={FirstPost1}
                 title="6947 Kirkbridge Hill"
                 text="Located in a highly sought-after neighborhood, this home is the perfect combination of privacy and accessibility."
-                action={() => alert("clicked")}
+                action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -50,7 +50,7 @@ export default function Projects() {
                 img={FirstPost2}
                 title="The Hills of Chelsea Park"
                 text="This property comes with a fitted indoor pool equipped with temprature control."
-                action={() => alert("clicked")}
+                action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -58,7 +58,7 @@ export default function Projects() {
                 img={FirstPost3}
                 title="SouthEast Michigan"
                 text="Beautifully styled kitchen with a modern feel to it. "
-                action={() => alert("clicked")}
+                action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'}
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function Projects() {
                 img={FirstPost4}
                 title="Renovated Project"
                 text="Escape to your own private oasis in the spacious master suite."
-                action={() => alert("clicked")}
+                action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -76,13 +76,13 @@ export default function Projects() {
                 img={FirstPost5}
                 title="Open Concept"
                 text="Imagine entertaining guests in the beautiful, open-concept living and dining areas. Enjoy the convenience of a double car garage and ample storage space."
-                action={() => alert("clicked")}
+                action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'}
               />
             </div>
           </div>
           <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Show More" action={() => window.location.href = 'https://www.zillow.com/profile/Sulay-K/'} />
+              <FullButton title="Show More" action={() => window.location.href = 'https://www.instagram.com/soldbysulay/'} />
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Projects() {
               </p>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
-                  <FullButton title="Get Started" action={() => alert("clicked")} />
+                  <FullButton title="Get Started" action={() => window.location.href = 'https://www.zillow.com/profile/Sulay-K/'} />
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
                   <Link to="contact" spy={true} smooth={true} >
