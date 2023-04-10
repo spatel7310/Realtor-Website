@@ -21,8 +21,8 @@ We used the following technologies to develop this website:
 
 ## Future Enhancements
 
-We are constantly working to improve the website and make it even more valuable for our client and his customers. Some potential enhancements include:
+I am constantly working to improve the website and make it even more valuable for my client and his customers.
 
 ## Feedback
 
-We welcome any feedback or suggestions on how we can improve this website. Please contact us using the form provided on the website or email us directly at [client-email-address]. Thank you for visiting our website!
+I welcome any feedback or suggestions on how I can improve this website. Please contact me using the form provided on the website or email me directly at spatel8291@gmail.com. Thank you for visiting my website!
